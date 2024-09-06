@@ -19,8 +19,10 @@
 
 #ifdef __CUDA_ARCH__
 #define CONSTANT __device__ __constant__ const
+#define CONSTANT_EXPR __device__ __constant__ constexpr
 #else
 #define CONSTANT const
+#define CONSTANT_EXPR constexpr
 #endif
 
 #endif // CUCRYPTO_UTILS_H
